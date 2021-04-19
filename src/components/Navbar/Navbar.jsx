@@ -16,7 +16,6 @@ import logo from "../../assets/commerce.png";
 import useStyles from "./styles";
 import { useState } from "react";
 import { SidebarData } from "../Sidebar/SidebarData";
-import "./Navbar.css";
 
 const Navbar = ({ totalItems }) => {
   const classes = useStyles();
@@ -36,17 +35,12 @@ const Navbar = ({ totalItems }) => {
             className={classes.title}
             color='inherit'
           >
-            {/* <div className='navbar'>
-              <Tooltip title='Menu'>
-                <MenuIcon onClick={showSideBar} />
-              </Tooltip>
-            </div> */}
             <img
               src={logo}
-              alt='Commerce.js'
+              alt='commerce.js'
               height='25px'
               className={classes.image}
-            />
+            />{" "}
             Commerce.js
           </Typography>
           <div className={classes.grow} />
@@ -66,24 +60,6 @@ const Navbar = ({ totalItems }) => {
           )}
         </Toolbar>
       </AppBar>
-      {/* <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-        <ul className='nav-menu-items'>
-          <br />
-          <br />
-          <br />
-          <br />
-          {SidebarData.map((item, index) => {
-            return (
-              <li key={index} className={item.className}>
-                <Link to={item.path}>
-                  {item.icon}
-                  <span>{item.title}</span>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </nav> */}
     </>
   );
 };
